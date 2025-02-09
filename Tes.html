@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Redirect dengan Tombol</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let timeoutRedirect;
+
+            // Fungsi untuk melakukan auto redirect ke WhatsApp
+            function redirectToWA() {
+                window.location.href = "https://wa.me/085183111828?text=blabbla";
+            }
+
+            // Mengatur auto redirect setelah 5 detik
+            timeoutRedirect = setTimeout(redirectToWA, 5000); // 5000ms = 5 detik
+
+            // Membatalkan redirect jika tombol diklik
+            document.getElementById("cancelRedirectBtn").addEventListener("click", function() {
+                clearTimeout(timeoutRedirect);
+                alert("Redirect dibatalkan.");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Halaman ini akan mengarahkan Anda ke WhatsApp dalam 5 detik...</h1>
+    <button id="cancelRedirectBtn">Batal Redirect</button>
+</body>
+</html>
