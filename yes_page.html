@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aku tau kamu menyukaiku!</title>
     <link rel="stylesheet" href="./yes_style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let timeoutRedirect;
+
+            // Fungsi untuk melakukan auto redirect ke WhatsApp
+            function redirectToWA() {
+                window.location.href = "https://wa.me/6285183111828?text=Hayyy+Sayanggg";
+            }
+
+            // Mengatur auto redirect setelah 5 detik
+            timeoutRedirect = setTimeout(redirectToWA, 5000); // 5000ms = 5 detik
+
+            // Tombol untuk langsung redirect ke WhatsApp
+            document.getElementById("redirectToWA").addEventListener("click", function() {
+                clearTimeout(timeoutRedirect); // Membatalkan auto redirect jika tombol diklik
+                window.location.href = "https://wa.me/6285183111828?text=Hayyy+Sayanggg"; // Langsung redirect ke WA
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -12,6 +31,7 @@
         <div class="gif_container">
             <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif">
         </div>
+        <button id="redirectToWA">Lanjuttt Chatt</button>
     </div>
 </body>
 </html>
