@@ -1,7 +1,7 @@
-# _config.yml
-title: My Website
+title: My Websitess
 url: "https://yusupfikrih.github.io"
 baseurl: ""
 collections:
   pages:
     output: true
+    permalink: /:name/
