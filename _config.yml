@@ -1,3 +1,7 @@
+# _config.yml
 title: My Website
 url: "https://yusupfikrih.github.io"
 baseurl: ""
+collections:
+  pages:
+    output: true
